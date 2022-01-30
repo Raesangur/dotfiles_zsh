@@ -12,6 +12,7 @@ alias my_ip="neofetch public_ip; neofetch local_ip"
 alias restart="sudo reboot"
 alias fucking=sudo
 alias please=sudo
+alias did_i_fucking_stutter='sudo $(fc -ln -1)'
 alias show=tycat
 
 # Setup small programs
