@@ -20,3 +20,6 @@ alias bon_matin="source ~/.zshrc"
 alias git_gud="~/dotfiles/git/git_gud.sh"
 alias git_clone="~/dotfiles/git/git_clone.sh"
 alias update="~/dotfiles/zsh/run_updates.sh"
+
+# .net
+export DOTNET_ROOT=/snap/dotnet-sdk/current
