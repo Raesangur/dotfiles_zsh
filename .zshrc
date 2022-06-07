@@ -45,7 +45,7 @@ source $ZSH/oh-my-zsh.sh
 
 
 # User configuration
-PATH=${PATH}:~/.local/bin
+PATH=${PATH}:~/.local/bin:~/scripts
 export PATH
 
 # Set Software Aliases
