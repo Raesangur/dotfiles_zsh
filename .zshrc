@@ -46,7 +46,11 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 PATH=${PATH}:~/.local/bin
-export PATH
+export PATH=$PATH:$HOME/ardupilot/Tools/autotest
+export PATH=$PATH:~/.local/.bin/gcc-arm-none-eabi-10-2020-q4-major/bin
+export PATH=/usr/lib/ccache:$PATH
+
+export DISPLAY="`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0"
 
 # Set Software Aliases
 source ~/dotfiles/zsh/alias
@@ -70,3 +74,23 @@ pathadd() {
 #~/scripts/welcome.sh
 source ~/dotfiles/zsh/welcome
 source ~/dotfiles/zsh/updates
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/root/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/root/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/root/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/root/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
