@@ -46,12 +46,14 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 PATH=${PATH}:~/.local/bin:~/scripts
+PATH=${PATH}:~/.cargo/bin
 export PATH
 
 # Set Software Aliases
 source ~/dotfiles/zsh/alias
 
-alias get_idf='. $HOME/esp/esp-idf/export.sh'
+# ESP-IDF
+alias get_idf='. $HOME/esp/esp-idf/export.sh ; . $HOME/esp/rust-build/export-esp.sh'
 
 # Setup ctrl+backspace & ctrl+delete to work in terminal
 bindkey '^H' backward-kill-word
