@@ -48,9 +48,10 @@ source $ZSH/oh-my-zsh.sh
 PATH=${PATH}:~/.local/bin
 export PATH=$PATH:$HOME/ardupilot/Tools/autotest
 export PATH=$PATH:~/.local/.bin/gcc-arm-none-eabi-10-2020-q4-major/bin
+export PATH=/opt/avr8-gnu-toolchain-linux_x86_64/bin:$PATH
 export PATH=/usr/lib/ccache:$PATH
 
-export DISPLAY="`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0"
+export DISPLAY=:0
 
 PATH=${PATH}:~/.local/bin:~/scripts
 PATH=${PATH}:~/.cargo/bin
