@@ -40,9 +40,10 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 PATH=${PATH}:~/.local/bin
+
 export PATH=/usr/lib/ccache:$PATH
 
-export DISPLAY="`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0"
+export DISPLAY=:0
 
 PATH=${PATH}:~/.local/bin:~/scripts
 PATH=${PATH}:~/.cargo/bin

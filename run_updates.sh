@@ -6,6 +6,7 @@
 # [ "$UID" -eq 0 ] || { echo "This script must be run as root."; exit 1;}
 
 # run apt updates
+<<<<<<< HEAD
 if command -v apt-get &> /dev/null ; then
 	sudo apt-get update
 	sudo apt-get upgrade -y
@@ -17,6 +18,13 @@ fi
 if command -v pacman &> /dev/null ; then
 	sudo pacman -Syu
 fi
+=======
+sudo apt-get update
+sudo apt-get upgrade -y
+sudo apt-get dist-upgrade -y
+sudo apt-get autopurge
+sudo apt-get autoclean
+>>>>>>> 832905ee5d33ce706f7b689749d870361b557c4e
 
 # other updates
 if command -v snap &> /dev/null ; then
